@@ -1,4 +1,6 @@
 import BlogImage from "../../Components/BlogImage/BlogImage";
+import PizzaHero from "../../Components/PizzaHero/PizzaHero";
+import Popular from "../../Components/PopularCard/Popular";
 import ChefHero from "../../Components/ChefHero/ChefHero";
 import Featured from "../../Components/Featured/Featured";
 import FixedDiv from "../../Components/FixedDiv/FixedDiv";
@@ -14,21 +16,39 @@ const Home = () => {
                     Children={<Hero />}
                 />
             </div>
-            <div className="min-w-fit">
+            <div className="w-full">
                 <div className="w-full">
                     <img src="https://i.ibb.co/V3QLRCS/Vector.png" alt="" />
                 </div>
             </div>
             <div className="bg-[#A30000] w-full h-full relative -mt-0 sm:-mt-4 lg:-mt-10">
-                <FixedDiv
-                    Children={<Featured />}
-                />
+                <Featured />
             </div>
             <div className="">
                 <BlogImage />
             </div>
             <div>
                 <ChefHero />
+            </div>
+            <div className="bg-[#3051C6] h-full min-w-min flex justify-start items-center">
+                <div>
+                    <div className="pt-10 pb-10">
+                        <FixedDiv
+                            Children={<PizzaHero />}
+                        />
+                    </div>
+                    <div className="w-full">
+                        <div className="w-full">
+                            <img src="https://i.ibb.co/5KbWjmY/Vector.png" alt="" className="" />
+                        </div>
+                    </div>
+                    <div className="bg-[#53B725]">
+                        <Popular />
+                    </div>
+                </div>
+            </div>
+            <div className="h-[100vh] bg-[#FDF6D2]">
+                <p>customer Reviews</p>
             </div>
         </div>
     );

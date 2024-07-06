@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 
 
-const FeaturedCard = ({ cardData }) => {
+const PopularCard = ({ cardData }) => {
     return (
         <div>
-            <div className="card bg-[#FFB500] shadow-xl">
+            <div className="card bg-[#FDF6D2] shadow-xl">
                 <figure className="px-4 pt-4">
                     <img
                         src={cardData.image}
@@ -13,11 +13,13 @@ const FeaturedCard = ({ cardData }) => {
                 </figure>
                 <div className="p-text text-center text-[#042F1A] font-bold flex justify-between items-center px-8 py-5">
                     <p>{cardData.title}</p>
-                    <p>{cardData.price}</p>
+                    <button className="btn btn-sm btn-outline border-[#042F1A] rounded-full py-0 px-8">
+                        Recipe
+                    </button>
                 </div>
             </div>
         </div>
     );
 };
 
-export default FeaturedCard;
+export default PopularCard;
