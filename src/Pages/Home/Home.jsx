@@ -1,6 +1,9 @@
+import BlogImage from "../../Components/BlogImage/BlogImage";
+import ChefHero from "../../Components/ChefHero/ChefHero";
 import Featured from "../../Components/Featured/Featured";
 import FixedDiv from "../../Components/FixedDiv/FixedDiv";
 import Hero from "../../Components/Hero/Hero";
+import './Home.css'
 
 
 const Home = () => {
@@ -16,10 +19,16 @@ const Home = () => {
                     <img src="https://i.ibb.co/V3QLRCS/Vector.png" alt="" />
                 </div>
             </div>
-            <div className="bg-[#A30000] w-full h-[100vh] relative -mt-0 sm:-mt-4 lg:-mt-10">
+            <div className="bg-[#A30000] w-full h-full relative -mt-0 sm:-mt-4 lg:-mt-10">
                 <FixedDiv
                     Children={<Featured />}
                 />
+            </div>
+            <div className="">
+                <BlogImage />
+            </div>
+            <div>
+                <ChefHero />
             </div>
         </div>
     );

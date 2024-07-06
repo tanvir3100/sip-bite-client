@@ -18,7 +18,7 @@ const Hero = () => {
                     </div>
                     <div className="flex-1">
                         <Fade direction='left' delay={20}>
-                            <h1 className="hero-h1-text text-7xl md:text-8xl font-bold text-[#FDF6D2] tracking-wide">Quality You
+                            <h1 className="hero-h1-text text-7xl md:text-7xl font-bold text-[#FDF6D2] tracking-wider">Quality You
                                 Can Taste</h1>
                         </Fade>
                         <Fade direction='up' delay={20}>
