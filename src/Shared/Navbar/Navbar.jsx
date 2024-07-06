@@ -51,7 +51,7 @@ const Navbar = () => {
                             <ul
                                 tabIndex={0}
                                 className={`menu menu-lg dropdown-content bg-[#FFB500] z-[1] mt-3 w-[425px] p-2 text-center shadow font-bold ${isOpen ? 'block' : 'hidden'} flex justify-center transition-all duration-300 ease-in-out top-11 -right-[355px]`}>
-                                <li className='flex justify-center w-full'><a>Our Menu</a></li>
+                                <li className='flex justify-center w-full'><a>Menu</a></li>
                                 <li className='flex justify-center w-full'><a>About</a></li>
                                 <li className='flex justify-center w-full'><a>Recipes</a></li>
                                 <li className='flex justify-center w-full'><a>Contact</a></li>
@@ -60,7 +60,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex-1 flex items-center justify-center md:justify-around font-bold w-screen">
                         <ul className="menu menu-horizontal px-1 hidden md:block text-xl">
-                            <li><a>Our Menu</a></li>
+                            <li><a>Menu</a></li>
                         </ul>
                         <ul className="menu menu-horizontal px-1 hidden md:block text-xl">
                             <li><a>About</a></li>
@@ -69,8 +69,8 @@ const Navbar = () => {
                         <ul className="menu menu-horizontal px-1 hidden md:block text-xl">
                             <li><a>Recipes</a></li>
                         </ul>
-                        <ul className="menu menu-horizontal px-1 hidden md:block text-xl">
-                            <li><a className='btn bg-[#042F1A] text-white py-0 px-5 border-none'>Contact</a></li>
+                        <ul className="menu menu-horizontal px-1 hidden md:block text-4xl">
+                            <li><a className='btn bg-[#042F1A] text-white py-0 px-10 border-none rounded-full text-xl'>Contact</a></li>
                         </ul>
                     </div>
                 </div>
