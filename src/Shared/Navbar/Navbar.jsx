@@ -1,14 +1,19 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
 import { useState } from 'react';
-import './Navbar.css'
+import './Navbar.css';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
+    const location = useLocation();
+
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
     };
+
+    // Check if the current path is "/menu"
+    const isMenuPage = location.pathname === '/menu';
 
     return (
         <div>
@@ -20,7 +25,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div>
-                <div className="navbar bg-[#FFB500] text-[#042F1A]">
+                <div className={`navbar ${isMenuPage ? 'bg-[#53B725] text-[#FDF6D2]' : 'bg-[#FFB500] text-[#042F1A]'}`}>
                     <div className="navbar-center">
                         <div className="dropdown w-full text-center">
                             <div onClick={toggleNavbar} tabIndex={0} role="button" className="btn btn-ghost md:hidden bg-[#042F1A] text-white text-center">
@@ -54,24 +59,24 @@ const Navbar = () => {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className={`menu menu-lg dropdown-content bg-[#FFB500] z-[1] mt-3 w-[425px] p-2 text-center shadow font-bold ${isOpen ? 'block' : 'hidden'} flex justify-center transition-all duration-300 ease-in-out top-11 -right-[355px]`}>
+                                className={`menu menu-lg dropdown-content ${isMenuPage ? 'bg-[#042F1A]' : 'bg-[#FFB500]'} z-[1] mt-3 w-[425px] p-2 text-center shadow font-bold ${isOpen ? 'block' : 'hidden'} flex justify-center transition-all duration-300 ease-in-out top-11 -right-[355px]`}>
                                 <li className='flex justify-center w-full'>
-                                    <NavLink to="/menu" style={({ isActive }) => ({ fontWeight: isActive ? "#FDF6D2" : "" })}>
+                                    <NavLink to="/menu" style={({ isActive }) => ({ fontWeight: isActive ? "bold" : "" })}>
                                         Menu
                                     </NavLink>
                                 </li>
                                 <li className='flex justify-center w-full'>
-                                    <NavLink to="/about" style={({ isActive }) => ({ fontWeight: isActive ? "#FDF6D2" : "" })}>
+                                    <NavLink to="/about" style={({ isActive }) => ({ fontWeight: isActive ? "bold" : "" })}>
                                         About
                                     </NavLink>
                                 </li>
                                 <li className='flex justify-center w-full'>
-                                    <NavLink to="/recipes" style={({ isActive }) => ({ fontWeight: isActive ? "#FDF6D2" : "" })}>
+                                    <NavLink to="/recipes" style={({ isActive }) => ({ fontWeight: isActive ? "bold" : "" })}>
                                         Recipes
                                     </NavLink>
                                 </li>
                                 <li className='flex justify-center w-full'>
-                                    <NavLink to="/contact" style={({ isActive }) => ({ fontWeight: isActive ? "#FDF6D2" : "" })}>
+                                    <NavLink to="/contact" style={({ isActive }) => ({ fontWeight: isActive ? "bold" : "" })}>
                                         Contact
                                     </NavLink>
                                 </li>
@@ -93,8 +98,11 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                         </ul>
-                        <a className="logo-text btn btn-ghost hover:bg-[#FFB500] text-4xl"><NavLink to=''>
-                            SipBite</NavLink></a>
+                        <a className="logo-text btn btn-ghost hover:bg-[#FFB500] text-4xl">
+                            <NavLink to=''>
+                                SipBite
+                            </NavLink>
+                        </a>
                         <ul className="menu menu-horizontal px-1 hidden md:block text-xl">
                             <li>
                                 <NavLink to="/recipes" style={({ isActive }) => ({ color: isActive ? "bold" : "" })}>
@@ -114,7 +122,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
 
