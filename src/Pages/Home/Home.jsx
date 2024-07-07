@@ -49,7 +49,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="h-[100vh] bg-[#FDF6D2] flex justify-center items-center">
-                <div className="w-5/6">
+                <div className="w-full sm:w-full md:w-5/6">
                     <Customer />
                 </div>
             </div>

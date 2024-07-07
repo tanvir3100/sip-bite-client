@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Navbar.css'
+import Marquee from 'react-fast-marquee';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +12,10 @@ const Navbar = () => {
     return (
         <div>
             <div>
-                <div className="bg-[#042F1A] text-white text-center p-1">
-                    <p>🎉 Get 20% Off on Your First Order! 🍔🍕🥤</p>
+                <div className="bg-[#A30000] text-[#FDF6D2] text-center p-1 tracking-wider">
+                    <Marquee>
+                        <p className='p-text font-bold text-2xl p-2'>Get 20% Off on Your First Order! 🍔🍕🥤 Get 20% Off on Your First Order! 🍔🍕🥤 Get 20% Off on Your First Order! 🍔🍕🥤</p>
+                    </Marquee>
                 </div>
             </div>
             <div>

@@ -6,7 +6,7 @@ const BlogImage = () => {
     return (
         <div className="h-full">
             <div
-                className="hero min-h-screen"
+                className="hero min-h-screen bg-fixed"
                 style={{
                     backgroundImage: "url(https://i.ibb.co/dfvD6Hz/dan-gold-E6-Hj-Qa-B7-UEA-unsplash-2.png)",
                 }}>
