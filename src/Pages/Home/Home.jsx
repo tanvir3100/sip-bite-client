@@ -6,6 +6,7 @@ import Featured from "../../Components/Featured/Featured";
 import FixedDiv from "../../Components/FixedDiv/FixedDiv";
 import Hero from "../../Components/Hero/Hero";
 import './Home.css'
+import Customer from "../../Components/Customer/Customer";
 
 
 const Home = () => {
@@ -24,7 +25,7 @@ const Home = () => {
             <div className="bg-[#A30000] w-full h-full relative -mt-0 sm:-mt-4 lg:-mt-10">
                 <Featured />
             </div>
-            <div className="">
+            <div className="w-full min-h-screen">
                 <BlogImage />
             </div>
             <div>
@@ -47,8 +48,10 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-[100vh] bg-[#FDF6D2]">
-                <p>customer Reviews</p>
+            <div className="h-[100vh] bg-[#FDF6D2] flex justify-center items-center">
+                <div className="w-5/6">
+                    <Customer />
+                </div>
             </div>
         </div>
     );
