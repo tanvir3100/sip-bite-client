@@ -13,7 +13,8 @@ const Navbar = () => {
     };
 
     // Check if the current path is "/menu"
-    const isMenuPage = location.pathname === '/menu';
+    // const isMenuPage = location.pathname === '/menu';
+    const isMenuPage = location.pathname.startsWith('/menu');
 
     return (
         <div>
@@ -59,24 +60,24 @@ const Navbar = () => {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className={`menu menu-lg dropdown-content ${isMenuPage ? 'bg-[#042F1A]' : 'bg-[#FFB500]'} z-[1] mt-3 w-[425px] p-2 text-center shadow font-bold ${isOpen ? 'block' : 'hidden'} flex justify-center transition-all duration-300 ease-in-out top-11 -right-[355px]`}>
+                                className={`dropdown-content ${isMenuPage ? 'bg-[#042F1A]' : 'bg-[#FFB500]'} z-[1] mt-3 w-[425px] p-2 text-center shadow font-bold ${isOpen ? 'block' : 'hidden'} flex justify-center transition-all duration-300 ease-in-out top-11 -right-[355px]`}>
                                 <li className='flex justify-center w-full'>
-                                    <NavLink to="/menu" style={({ isActive }) => ({ fontWeight: isActive ? "bold" : "" })}>
+                                    <NavLink to="/menu" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
                                         Menu
                                     </NavLink>
                                 </li>
                                 <li className='flex justify-center w-full'>
-                                    <NavLink to="/about" style={({ isActive }) => ({ fontWeight: isActive ? "bold" : "" })}>
+                                    <NavLink to="/about" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
                                         About
                                     </NavLink>
                                 </li>
                                 <li className='flex justify-center w-full'>
-                                    <NavLink to="/recipes" style={({ isActive }) => ({ fontWeight: isActive ? "bold" : "" })}>
+                                    <NavLink to="/recipes" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
                                         Recipes
                                     </NavLink>
                                 </li>
                                 <li className='flex justify-center w-full'>
-                                    <NavLink to="/contact" style={({ isActive }) => ({ fontWeight: isActive ? "bold" : "" })}>
+                                    <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
                                         Contact
                                     </NavLink>
                                 </li>
@@ -84,16 +85,16 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="flex-1 flex items-center justify-center md:justify-around font-bold w-screen">
-                        <ul className="menu menu-horizontal px-1 hidden md:block text-xl">
+                        <ul className="px-1 hidden md:block text-xl">
                             <li>
-                                <NavLink to="/menu" style={({ isActive }) => ({ color: isActive ? "bold" : "" })}>
+                                <NavLink to="/menu" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
                                     Menu
                                 </NavLink>
                             </li>
                         </ul>
-                        <ul className="menu menu-horizontal px-1 hidden md:block text-xl">
+                        <ul className="px-1 hidden md:block text-xl">
                             <li>
-                                <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? "bold" : "" })}>
+                                <NavLink to="/about" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
                                     About
                                 </NavLink>
                             </li>
@@ -103,16 +104,16 @@ const Navbar = () => {
                                 SipBite
                             </NavLink>
                         </a>
-                        <ul className="menu menu-horizontal px-1 hidden md:block text-xl">
+                        <ul className="px-1 hidden md:block text-xl">
                             <li>
-                                <NavLink to="/recipes" style={({ isActive }) => ({ color: isActive ? "bold" : "" })}>
+                                <NavLink to="/recipes" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
                                     Recipes
                                 </NavLink>
                             </li>
                         </ul>
-                        <ul className="menu menu-horizontal px-1 hidden md:block text-4xl">
+                        <ul className="px-1 hidden md:block text-4xl">
                             <li>
-                                <NavLink to="/contact" style={({ isActive }) => ({ color: isActive ? "bold" : "" })}>
+                                <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
                                     <button className='btn rounded-full text-xl border-none px-16 text-white bg-[#042F1A]'>
                                         Contact
                                     </button>

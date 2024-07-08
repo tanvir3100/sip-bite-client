@@ -1,16 +1,11 @@
+import BurgerMenu from "./BurgerMenu/BurgerMenu";
 
 const Menu = () => {
     return (
         <div className="w-full h-full">
-            <div>
-                <div className="min-h-screen bg-[#53B725]">
-                    <p>Pizzas Menu</p>
-                </div>
-                <div className="min-h-screen bg-[#3051C6]">
-                    <p>Burgers Menu</p>
-                </div>
-                <div className="min-h-screen bg-[#FDF6D2]">
-                    <p>Drinks Menu</p>
+            <div className="">
+                <div className="min-h-screen bg-[#53B725] px-10 mx-auto">
+                    <BurgerMenu />
                 </div>
             </div>
         </div>
@@ -18,3 +13,5 @@ const Menu = () => {
 };
 
 export default Menu;
+
+
