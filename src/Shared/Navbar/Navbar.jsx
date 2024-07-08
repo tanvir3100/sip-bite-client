@@ -99,7 +99,7 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                         </ul>
-                        <a className={`logo-text btn btn-ghost ${isMenuPage ? 'hover:bg-[#53B725]' : 'hover:bg-[#FFB500]'} hover:bg-[#FFB500] text-4xl`}>
+                        <a className={`logo-text btn btn-ghost ${isMenuPage ? 'hover:bg-[#53B725]' : 'hover:bg-[#FFB500]'} text-4xl`}>
                             <NavLink to=''>
                                 SipBite
                             </NavLink>
@@ -114,7 +114,7 @@ const Navbar = () => {
                         <ul className="px-1 hidden md:block text-4xl">
                             <li>
                                 <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
-                                    <button className='btn rounded-full text-xl border-none px-16 text-white bg-[#042F1A]'>
+                                    <button className='btn btn-outline rounded-full text-xl px-16 text-[#042F1A] border-2 border-[#042F1A] hover:bg-[#FDF6D2] hover:text-[#042F1A]'>
                                         Contact
                                     </button>
                                 </NavLink>
