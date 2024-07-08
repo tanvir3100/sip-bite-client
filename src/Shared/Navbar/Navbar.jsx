@@ -60,7 +60,7 @@ const Navbar = () => {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className={`dropdown-content ${isMenuPage ? 'bg-[#042F1A]' : 'bg-[#FFB500]'} z-[1] mt-3 w-[425px] p-2 text-center shadow font-bold ${isOpen ? 'block' : 'hidden'} flex justify-center transition-all duration-300 ease-in-out top-11 -right-[355px]`}>
+                                className={`menu-vertical text-2xl dropdown-content ${isMenuPage ? 'bg-[#53B725]' : 'bg-[#FFB500]'} z-[1] mt-3 w-[425px] p-2 text-center shadow font-bold ${isOpen ? 'block' : 'hidden'} flex justify-center transition-all duration-300 ease-in-out top-11 -right-[355px]`}>
                                 <li className='flex justify-center w-full'>
                                     <NavLink to="/menu" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
                                         Menu
@@ -99,7 +99,7 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                         </ul>
-                        <a className="logo-text btn btn-ghost hover:bg-[#FFB500] text-4xl">
+                        <a className={`logo-text btn btn-ghost ${isMenuPage ? 'hover:bg-[#53B725]' : 'hover:bg-[#FFB500]'} hover:bg-[#FFB500] text-4xl`}>
                             <NavLink to=''>
                                 SipBite
                             </NavLink>

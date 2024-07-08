@@ -12,7 +12,7 @@ const Hero = () => {
                             <div>
                                 <img
                                     src="https://i.ibb.co/yksfjKx/ai-generated-8723664-2.png"
-                                    className="md:max-w-sm" />
+                                    className="md:max-w-sm lg:max-w-80" />
                             </div>
                         </Fade>
                     </div>

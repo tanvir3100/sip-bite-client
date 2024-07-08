@@ -3,15 +3,15 @@ import { NavLink, Outlet } from "react-router-dom";
 const BurgerMenu = () => {
     return (
         <div>
-            <div className="flex max-w-7xl mx-auto min-h-screen">
+            <div className="flex max-w-7xl mx-auto h-full pt-5 md:pt-0">
                 {/* dashboard side bar */}
-                <div className="w-64 min-h-full">
-                    <ul className="p-text p-4 text-2xl flex flex-col justify-around font-bold h-full">
+                <div className="w-3/6 lg:w-2/6 min-h-full">
+                    <ul className="h1-text p-0 sm:p-0 md:p-2 lg:p-4 md:text-2xl lg:text-3xl text-[#042F1A] flex flex-col justify-evenly h-full tracking-wider">
                         <>
                             <li>
                                 <NavLink
                                     to='/menu/classic'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     Classic Burger
                                 </NavLink>
@@ -19,7 +19,7 @@ const BurgerMenu = () => {
                             <li>
                                 <NavLink
                                     to='/menu/spicy'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     Spicy Burger
                                 </NavLink>
@@ -27,7 +27,7 @@ const BurgerMenu = () => {
                             <li>
                                 <NavLink
                                     to='/menu/bbq'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     BBQ Burger
                                 </NavLink>
@@ -35,7 +35,7 @@ const BurgerMenu = () => {
                             <li>
                                 <NavLink
                                     to='/menu/veggie'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     Veggie Burger
                                 </NavLink>
@@ -43,7 +43,7 @@ const BurgerMenu = () => {
                             <li>
                                 <NavLink
                                     to='/menu/margherita'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     Margherita Pizza
                                 </NavLink>
@@ -51,7 +51,7 @@ const BurgerMenu = () => {
                             <li>
                                 <NavLink
                                     to='/menu/pepperoni'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     Pepperoni Pizza
                                 </NavLink>
@@ -59,7 +59,7 @@ const BurgerMenu = () => {
                             <li>
                                 <NavLink
                                     to='/menu/chicken'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     BBQ Chicken Pizza
                                 </NavLink>
@@ -67,7 +67,7 @@ const BurgerMenu = () => {
                             <li>
                                 <NavLink
                                     to='/menu/supreme'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     Supreme Pizza
                                 </NavLink>
@@ -75,7 +75,7 @@ const BurgerMenu = () => {
                             <li>
                                 <NavLink
                                     to='/menu/cappuccino'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     Classic Cappuccino
                                 </NavLink>
@@ -83,7 +83,7 @@ const BurgerMenu = () => {
                             <li>
                                 <NavLink
                                     to='/menu/latte'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     Vanilla Latte
                                 </NavLink>
@@ -91,7 +91,7 @@ const BurgerMenu = () => {
                             <li>
                                 <NavLink
                                     to='/menu/caramel'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     Iced Caramel
                                 </NavLink>
@@ -99,7 +99,7 @@ const BurgerMenu = () => {
                             <li>
                                 <NavLink
                                     to='/menu/mocha'
-                                    className={({ isActive }) => isActive ? 'text-white' : ''}
+                                    className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}
                                 >
                                     Mocha Coffee
                                 </NavLink>
@@ -108,9 +108,11 @@ const BurgerMenu = () => {
                     </ul>
                 </div>
                 {/* dashboard contain */}
-                <div className="flex-1">
-                    <div className="w-4/5 mx-auto mb-10">
-                        <Outlet />
+                <div className="w-3/6 lg:4/6">
+                    <div className="w-full h-full mx-auto mb-10 flex justify-center items-center">
+                        <div>
+                            <Outlet />
+                        </div>
                     </div>
                 </div>
             </div>
