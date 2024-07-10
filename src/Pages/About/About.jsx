@@ -1,7 +1,8 @@
 import ButtonGlobal from "../../Components/Button/ButtonGlobal";
 import FixedDiv from "../../Components/FixedDiv/FixedDiv";
-import popularData from '../../../public/products.json';
-import PopularCard from "../../Components/PopularCard/PopularCard";
+import chefsData from '../../../public/chefs.json';
+import ChefCard from "../../Components/ChefCard/ChefCard";
+
 
 
 const About = () => {
@@ -24,11 +25,11 @@ const About = () => {
                 </div>
             </div>
             <div>
-                <div className="hero bg-[#3051C6] min-h-screen text-[#FDF6D2]">
-                    <FixedDiv Children={<div className="hero-content flex-col justify-center items-center lg:flex-row-reverse px-20 mx-auto">
+                <div className="hero bg-[#3051C6] h-full text-[#FDF6D2]">
+                    <FixedDiv Children={<div className="hero-content flex-col justify-center items-center lg:flex-row-reverse px-5 md:px-10 lg:px-20 mx-auto">
                         <img
                             src="https://i.ibb.co/pL71bmV/no-bg.png"
-                            className="max-w-lg" />
+                            className="lg:max-w-lg" />
                         <div className="">
                             <h1 className="p-text text-5xl font-bold">CEO of SipBite</h1>
                             <h1 className="text-xl font-bold pt-3">Mirajul Islam Tanvir</h1>
@@ -41,16 +42,18 @@ const About = () => {
                     </div>} />
                 </div>
             </div>
-            <div className="px-[30%] mx-auto flex justify-center items-center pt-10 pb-5">
-                <div>
-                    <h1 className="p-text text-5xl font-bold text-center">Our Dedicated Chefs</h1>
-                    <p className="p-text text-center">At SipBite, our talented chefs are the heart of our kitchen, bringing passion, expertise, and creativity to every dish, ensuring each meal is an extraordinary culinary experience.</p>
+            <div className="bg-[#3051C6] text-[#FDF6D2]">
+                <div className="px-[5%] sm:px-[5%] md:px-[10%] lg:px-[30%] mx-auto flex justify-center items-center pt-10 pb-5">
+                    <div>
+                        <h1 className="p-text text-5xl font-bold text-center">Our Dedicated Chefs</h1>
+                        <p className="p-text text-center">At SipBite, our talented chefs are the heart of our kitchen, bringing passion, expertise, and creativity to every dish, ensuring each meal is an extraordinary culinary experience.</p>
+                    </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-3 px-[10%] mx-auto gap-5 py-10">
-                {popularData.map(cardData => (
-                    <PopularCard key={cardData.id} cardData={cardData} />
-                ))}
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-[10%] mx-auto gap-5 py-10">
+                    {chefsData.map(chefData => (
+                        <ChefCard key={chefData.id} chefData={chefData} />
+                    ))}
+                </div>
             </div>
         </div>
     );

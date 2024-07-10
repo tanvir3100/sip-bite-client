@@ -15,6 +15,7 @@ const Navbar = () => {
     // Check if the current path is "/menu"
     // const isMenuPage = location.pathname === '/menu';
     const isMenuPage = location.pathname.startsWith('/menu');
+    const isAboutPage = location.pathname.startsWith('/about');
 
     return (
         <div>
@@ -26,7 +27,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div>
-                <div className={`navbar ${isMenuPage ? 'bg-[#53B725] text-[#FDF6D2]' : 'bg-[#FFB500] text-[#042F1A]'}`}>
+                <div className={`navbar ${isMenuPage ? 'bg-[#53B725] text-[#FDF6D2]' : isAboutPage ? 'bg-[#3051C6] text-[#042F1A]' : 'bg-[#FFB500] text-[#042F1A]'}`}>
                     <div className="navbar-center">
                         <div className="dropdown w-full text-center">
                             <div onClick={toggleNavbar} tabIndex={0} role="button" className="btn btn-ghost md:hidden bg-[#042F1A] text-white text-center">
@@ -60,7 +61,7 @@ const Navbar = () => {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className={`menu-vertical text-2xl dropdown-content ${isMenuPage ? 'bg-[#53B725]' : 'bg-[#FFB500]'} z-[1] mt-3 w-[425px] p-2 text-center shadow font-bold ${isOpen ? 'block' : 'hidden'} flex justify-center transition-all duration-300 ease-in-out top-11 -right-[355px]`}>
+                                className={`menu-vertical text-2xl dropdown-content ${isMenuPage ? 'bg-[#53B725]' : isAboutPage ? 'bg-[#3051C6]' : 'bg-[#FFB500]'} z-[1] mt-3 w-[425px] p-2 text-center shadow font-bold ${isOpen ? 'block' : 'hidden'} flex justify-center transition-all duration-300 ease-in-out top-11 -right-[355px]`}>
                                 <li className='flex justify-center w-full'>
                                     <NavLink to="/menu" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
                                         Menu
@@ -99,7 +100,7 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                         </ul>
-                        <a className={`logo-text btn btn-ghost ${isMenuPage ? 'hover:bg-[#53B725]' : 'hover:bg-[#FFB500]'} text-4xl`}>
+                        <a className={`logo-text btn btn-ghost ${isMenuPage ? 'hover:bg-[#53B725]' : isAboutPage ? 'hover:bg-[#3051C6]' : 'hover:bg-[#FFB500]'} text-4xl`}>
                             <NavLink to=''>
                                 SipBite
                             </NavLink>
@@ -128,3 +129,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
