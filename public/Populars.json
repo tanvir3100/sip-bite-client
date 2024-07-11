@@ -1,17 +1,17 @@
 [
     {
         "id": 1,
-        "title": "BBQ Bacon",
-        "image": "https://i.ibb.co/6bsPVDz/ai-generated-8606255-2.png",
-        "price": "$12.99",
-        "short_description": "Smoky BBQ sauce, crispy bacon, cheddar cheese, and onion rings."
-    },
-    {
-        "id": 2,
         "title": "Iced Coffee",
         "image": "https://i.ibb.co/j8pjnsV/coffee-3727673-1.png",
         "price": "$3.99",
         "short_description": "A refreshing iced coffee brewed to perfection, served with ice cubes."
+    },
+    {
+        "id": 2,
+        "title": "BBQ Bacon",
+        "image": "https://i.ibb.co/6bsPVDz/ai-generated-8606255-2.png",
+        "price": "$12.99",
+        "short_description": "Smoky BBQ sauce, crispy bacon, cheddar cheese, and onion rings."
     },
     {
         "id": 3,
@@ -33,12 +33,5 @@
         "image": "https://i.ibb.co/j8pjnsV/coffee-3727673-1.png",
         "price": "$8.99",
         "short_description": "Grilled chicken, romaine lettuce, parmesan cheese, and Caesar dressing in a wrap."
-    },
-    {
-        "id": 6,
-        "title": "Berry Smoothie",
-        "image": "https://i.ibb.co/QdL18LS/pizza-2589569-2.png",
-        "price": "$4.99",
-        "short_description": "A blend of fresh berries, yogurt, and honey for a refreshing drink."
     }
 ]
