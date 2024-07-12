@@ -4,7 +4,6 @@ import RecipesData from '../../../public/recipes.json'
 
 
 const Recipes = () => {
-    console.log(RecipesData)
     return (
         <div className="w-full h-full bg-[#FF5700]">
             <div

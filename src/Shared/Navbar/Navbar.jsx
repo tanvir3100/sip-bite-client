@@ -113,12 +113,10 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                         </ul>
-                        <ul className="px-1 hidden md:block text-4xl">
+                        <ul className="px-1 hidden md:block text-xl">
                             <li>
                                 <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
-                                    <button className='btn btn-outline rounded-full text-xl px-16 text-[#042F1A] border-2 border-[#042F1A] hover:bg-[#FDF6D2] hover:text-[#042F1A]'>
-                                        Contact
-                                    </button>
+                                    Contact
                                 </NavLink>
                             </li>
                         </ul>

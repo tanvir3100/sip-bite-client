@@ -10,7 +10,7 @@ const RecipeCard = ({ recipe }) => {
                     <img
                         src={recipe.image}
                         alt="Shoes"
-                        className="rounded-md w-full h-[340px] sm:h-[340px] md:h-[350px] lg:h-[370px]" />
+                        className="rounded-md w-full h-full" />
                 </figure>
                 <div className="p-text text-start text-[#042F1A] font-bold flex-col justify-between items-start px-8 py-5">
                     <h1 className="text-3xl mb-2">{recipe.title}</h1>
