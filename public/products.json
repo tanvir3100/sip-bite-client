@@ -23,21 +23,21 @@
     {
         "id": 4,
         "title": "Veggie Delight",
-        "image": "https://i.ibb.co/6bsPVDz/ai-generated-8606255-2.png",
+        "image": "https://i.ibb.co/YPt04fT/allen-rad-9-G-o-JBKwi1c-unsplash.png",
         "price": "$11.99",
         "short_description": "A mix of fresh vegetables including bell peppers, onions, mushrooms, and olives."
     },
     {
         "id": 5,
         "title": "Chicken Caesar Wrap",
-        "image": "https://i.ibb.co/j8pjnsV/coffee-3727673-1.png",
+        "image": "https://i.ibb.co/MCtPYq9/pizza-8800490-1.png",
         "price": "$8.99",
         "short_description": "Grilled chicken, romaine lettuce, parmesan cheese, and Caesar dressing in a wrap."
     },
     {
         "id": 6,
-        "title": "Berry Smoothie",
-        "image": "https://i.ibb.co/QdL18LS/pizza-2589569-2.png",
+        "title": "Smoothie Coffee",
+        "image": "https://i.ibb.co/h73yYzj/ai-generated-8689523.png",
         "price": "$4.99",
         "short_description": "A blend of fresh berries, yogurt, and honey for a refreshing drink."
     }

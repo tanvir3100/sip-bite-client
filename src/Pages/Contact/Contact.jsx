@@ -33,7 +33,7 @@ const Contact = () => {
             <div className="bg-[#53B725] text-[#FDF6D2] py-0 sm:py-0 md:py-10">
                 <div className="text-center">
                     <h2 className="text-3xl font-bold">Our Location</h2>
-                    <p className="text-xl">1234 Street Name, City, State, ZIP</p>
+                    <p className="text-xl">1712 Sataish, tongi,Gazipur,Dhaka,Bangladesh</p>
                 </div>
                 <div className="flex justify-center mt-6">
                     <iframe

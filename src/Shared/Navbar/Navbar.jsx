@@ -28,7 +28,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div>
-                <div className={`navbar ${isMenuPage ? 'bg-[#53B725] text-[#FDF6D2]' : isAboutPage ? 'bg-[#3051C6] text-[#042F1A]' : isRecipesPage ? 'bg-[#FF5700] text-[#042F1A]' : 'bg-[#FFB500] text-[#042F1A]'}`}>
+                <div className={`navbar ${isMenuPage ? 'bg-[#53B725] text-[#042F1A]' : isAboutPage ? 'bg-[#3051C6] text-[#042F1A]' : isRecipesPage ? 'bg-[#FF5700] text-[#042F1A]' : 'bg-[#FFB500] text-[#042F1A]'}`}>
                     <div className="navbar-center">
                         <div className="dropdown w-full text-center">
                             <div onClick={toggleNavbar} tabIndex={0} role="button" className="btn btn-ghost md:hidden bg-[#042F1A] text-white text-center">
