@@ -4,16 +4,14 @@ import { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
 
+    const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
     };
 
-    // Check if the current path is "/menu"
-    // const isMenuPage = location.pathname === '/menu';
     const isMenuPage = location.pathname.startsWith('/menu');
     const isAboutPage = location.pathname.startsWith('/about');
     const isRecipesPage = location.pathname.startsWith('/recipes');
@@ -31,7 +29,7 @@ const Navbar = () => {
                 <div className={`navbar ${isMenuPage ? 'bg-[#53B725] text-[#042F1A]' : isAboutPage ? 'bg-[#3051C6] text-[#042F1A]' : isRecipesPage ? 'bg-[#FF5700] text-[#042F1A]' : 'bg-[#FFB500] text-[#042F1A]'}`}>
                     <div className="navbar-center">
                         <div className="dropdown w-full text-center">
-                            <div onClick={toggleNavbar} tabIndex={0} role="button" className="btn btn-ghost md:hidden bg-[#042F1A] text-white text-center">
+                            <div onClick={toggleNavbar} tabIndex={0} role="button" className="btn btn-ghost md:hidden text-white text-center font-bold">
                                 {isOpen ? (
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"

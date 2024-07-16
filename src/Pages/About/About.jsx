@@ -1,11 +1,13 @@
 import ButtonGlobal from "../../Components/Button/ButtonGlobal";
 import FixedDiv from "../../Components/FixedDiv/FixedDiv";
-import chefsData from '../../../public/chefs.json';
+// import chefsData from '../../../public/chefs.json';
 import ChefCard from "../../Components/ChefCard/ChefCard";
+import useChef from "../../Hooks/useChef";
 
 
 
 const About = () => {
+    const [chefsData] = useChef();
     return (
         <div className="w-full h-full">
             <div

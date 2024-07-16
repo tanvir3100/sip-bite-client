@@ -1,8 +1,10 @@
-import popularData from '../../../public/Populars.json';
+// import popularData from '../../../public/Populars.json';
+import usePopulars from '../../Hooks/usePopulars';
 import PopularCard from './PopularCard';
 import { useState } from 'react';
 
 const Popular = () => {
+    const [popular] = usePopulars();
     const [itemsToShow, setItemsToShow] = useState(3);
 
     const handleShowMore = () => {
@@ -18,12 +20,12 @@ const Popular = () => {
                 </div>
             </div>
             <div className="featured-container mt-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5 sm:px-0 md:px-20 lg:px-24 xl:px-30 mx-auto">
-                {popularData.slice(0, itemsToShow).map(cardData => (
+                {popular.slice(0, itemsToShow).map(cardData => (
                     <PopularCard key={cardData.id} cardData={cardData} />
                 ))}
             </div>
             <div className='w-full flex justify-center items-center py-10'>
-                {itemsToShow < popularData.length && (
+                {itemsToShow < popular.length && (
                     <button
                         className="btn btn-outline text-[#FDF6D2] hover:bg-[#ebde9f] hover:text-black py-0 px-20 border-[#042F1A] border-2 rounded-full text-xl font-bold"
                         onClick={handleShowMore}

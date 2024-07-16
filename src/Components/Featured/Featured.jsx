@@ -1,4 +1,3 @@
-import cardsData from '../../../public/products.json';
 import FeaturedCard from './FeaturedCard';
 import './Featured.css';
 import { useState } from 'react';
@@ -24,7 +23,7 @@ const Featured = () => {
                 ))}
             </div>
             <div className="w-full flex justify-center items-center py-10">
-                {itemsToShow < cardsData.length && (
+                {itemsToShow < product.length && (
                     <button
                         className="btn btn-outline text-[#FDF6D2] border-[#FFB500] border-2 hover:bg-[#ebde9f] hover:text-black py-0 px-20 rounded-full text-xl font-bold"
                         onClick={handleShowMore}

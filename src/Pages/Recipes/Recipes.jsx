@@ -1,9 +1,10 @@
 import ButtonGlobal from "../../Components/Button/ButtonGlobal";
 import RecipeCard from "../../Components/RecipeCard/RecipeCard";
-import RecipesData from '../../../public/recipes.json'
+import useRecipes from "../../Hooks/useRecipes";
 
 
 const Recipes = () => {
+    const [recipes] = useRecipes();
     return (
         <div className="w-full h-full bg-[#FF5700]">
             <div
@@ -31,7 +32,7 @@ const Recipes = () => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 px-5 sm:px-6 md:px-12 lg:px-32 mx-auto pb-10">
                     {
-                        RecipesData.map(recipe => (<RecipeCard key={recipe.id} recipe={recipe} />))
+                        recipes.map(recipe => (<RecipeCard key={recipe.id} recipe={recipe} />))
                     }
                 </div>
             </div>
