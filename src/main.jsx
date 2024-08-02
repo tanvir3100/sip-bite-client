@@ -16,7 +16,7 @@ function Root() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000); 
+    }, 4500); 
   }, []);
 
   return (

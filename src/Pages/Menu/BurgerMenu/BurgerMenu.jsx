@@ -1,6 +1,8 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import Menupage from "../Menupage";
 
 const BurgerMenu = () => {
+    const location = useLocation('/menu')
     return (
         <div>
             <div className="flex max-w-7xl mx-auto h-full pt-5 md:pt-0">
@@ -111,7 +113,9 @@ const BurgerMenu = () => {
                 <div className="w-3/6 lg:4/6">
                     <div className="w-full h-full mx-auto mb-10 flex justify-center items-center">
                         <div>
-                            <Outlet />
+                            {
+                                location.pathname === '/menu' ? <Menupage /> : <Outlet />
+                            }
                         </div>
                     </div>
                 </div>
