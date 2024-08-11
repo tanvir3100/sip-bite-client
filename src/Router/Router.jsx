@@ -19,6 +19,7 @@ import Bbq from "../Pages/Burgers/Bbq";
 import Home from "../Pages/Home/Home";
 import Menu from "../Pages/Menu/Menu";
 import Cart from "../Pages/Cart/Cart";
+import AddItem from "../Pages/AddItem/AddItem";
 
 
 
@@ -109,7 +110,13 @@ const Router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <Dashboard />
+        element: <Dashboard />,
+        children: [
+            {
+                path: 'addItems',
+                element: <AddItem />
+            }
+        ]
     }
 ]);
 

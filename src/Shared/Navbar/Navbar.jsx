@@ -1,5 +1,4 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import { BsCart } from "react-icons/bs";
 import Marquee from 'react-fast-marquee';
 import { useState } from 'react';
 import './Navbar.css';
@@ -116,13 +115,6 @@ const Navbar = () => {
                             <li>
                                 <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
                                     Contact
-                                </NavLink>
-                            </li>
-                        </ul>
-                        <ul className="px-1 hidden md:block text-xl">
-                            <li>
-                                <NavLink to="/cart" className={({ isActive }) => isActive ? 'text-[#FDF6D2]' : ''}>
-                                    <BsCart />
                                 </NavLink>
                             </li>
                         </ul>
