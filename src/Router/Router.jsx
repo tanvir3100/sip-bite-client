@@ -1,22 +1,24 @@
 import { createBrowserRouter } from "react-router-dom";
+import Margherita from "../Pages/Pizzas/Margherita";
+import Cappuccino from "../Pages/Drinks/Cappuccino";
+import Pepperoni from "../Pages/Pizzas/Pepperoni";
+import Classic from "../Pages/Burgers/classic";
 import Contact from "../Pages/Contact/Contact";
 import Recipes from "../Pages/Recipes/Recipes";
+import Caramel from "../Pages/Drinks/Caramel";
 import MainLayout from "../Layout/MainLayout";
-import About from "../Pages/About/About";
-import Home from "../Pages/Home/Home";
-import Menu from "../Pages/Menu/Menu";
-import Classic from "../Pages/Burgers/classic";
-import Spicy from "../Pages/Burgers/Spicy";
-import Bbq from "../Pages/Burgers/Bbq";
-import Veggie from "../Pages/Burgers/Veggie";
-import Margherita from "../Pages/Pizzas/Margherita";
-import Pepperoni from "../Pages/Pizzas/Pepperoni";
 import Chicken from "../Pages/Pizzas/Chicken";
 import Supreme from "../Pages/Pizzas/Supreme";
+import Veggie from "../Pages/Burgers/Veggie";
+import Dashboard from "../Layout/Dashboard";
+import Spicy from "../Pages/Burgers/Spicy";
 import Latte from "../Pages/Drinks/Latte";
-import Cappuccino from "../Pages/Drinks/Cappuccino";
-import Caramel from "../Pages/Drinks/Caramel";
 import Mocha from "../Pages/Drinks/Mocha";
+import About from "../Pages/About/About";
+import Bbq from "../Pages/Burgers/Bbq";
+import Home from "../Pages/Home/Home";
+import Menu from "../Pages/Menu/Menu";
+import Cart from "../Pages/Cart/Cart";
 
 
 
@@ -43,6 +45,10 @@ const Router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact />
+            },
+            {
+                path: '/cart',
+                element: <Cart />
             },
             {
                 path: 'menu',
@@ -98,8 +104,12 @@ const Router = createBrowserRouter([
                     },
 
                 ]
-            }
+            },
         ]
+    },
+    {
+        path: '/dashboard',
+        element: <Dashboard />
     }
 ]);
 
