@@ -20,6 +20,8 @@ import Home from "../Pages/Home/Home";
 import Menu from "../Pages/Menu/Menu";
 import Cart from "../Pages/Cart/Cart";
 import AddItem from "../Pages/AddItem/AddItem";
+import Login from "../Pages/Login/Login";
+import PrivateRoute from "./PrivetRoute";
 
 
 
@@ -109,8 +111,12 @@ const Router = createBrowserRouter([
         ]
     },
     {
+        path: '/login',
+        element: <Login />
+    },
+    {
         path: '/dashboard',
-        element: <Dashboard />,
+        element: <PrivateRoute><Dashboard /></PrivateRoute>,
         children: [
             {
                 path: 'addItems',

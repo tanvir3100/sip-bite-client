@@ -1,11 +1,25 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { LuShoppingCart } from 'react-icons/lu';
 import { ImSpoonKnife } from "react-icons/im";
-import { FaList, FaUser } from "react-icons/fa";
-import { FaHome } from 'react-icons/fa';
+import { FaList, FaUser, FaHome, FaSignOutAlt } from 'react-icons/fa';
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider/AuthProvider";
+
 
 
 const Dashboard = () => {
+    const { logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+        try {
+            await logOut();
+            navigate('/'); // Redirect to home or login page after logout
+        } catch (error) {
+            console.error("Logout failed", error);
+        }
+    };
+
     return (
         <div className="flex max-w-7xl mx-auto min-h-screen">
             {/* dashboard side bar */}
@@ -44,12 +58,18 @@ const Dashboard = () => {
                     <li>
                         <NavLink to='/dashboard/review'>
                             <LuShoppingCart className="text-2xl" />
-                            add review
+                            Add review
                         </NavLink>
+                    </li>
+                    <li>
+                        <button onClick={handleLogout} className="btn">
+                            <FaSignOutAlt className="text-2xl" />
+                            Logout
+                        </button>
                     </li>
                 </ul>
             </div>
-            {/* dashboard contain */}
+            {/* dashboard content */}
             <div className="flex-1">
                 <div className="w-4/5 mx-auto mb-10">
                     <Outlet />

@@ -6,6 +6,8 @@ import { RouterProvider } from 'react-router-dom';
 import Router from './Router/Router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import LoadingAnimation from './Components/Animation/LoadingAnimation';
+import AuthProvider from './Provider/AuthProvider/AuthProvider';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 const queryClient = new QueryClient();
@@ -16,7 +18,7 @@ function Root() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 4500); 
+    }, 4500);
   }, []);
 
   return (
@@ -25,7 +27,11 @@ function Root() {
         <LoadingAnimation />
       ) : (
         <QueryClientProvider client={queryClient}>
-          <RouterProvider router={Router} />
+          <HelmetProvider>
+            <AuthProvider>
+              <RouterProvider router={Router} />
+            </AuthProvider>
+          </HelmetProvider>
         </QueryClientProvider>
       )}
     </React.StrictMode>
