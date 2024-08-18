@@ -10,7 +10,7 @@ const AddItems = () => {
 
     const onSubmit = async (data) => {
         try {
-            console.log(data);
+            console.log('Form Data:', data);
 
             // Image upload to imgbb
             const formData = new FormData();
@@ -22,30 +22,42 @@ const AddItems = () => {
                 }
             });
 
+            console.log('Image upload response:', res.data);
+
             if (res.data.success) {
                 // Prepare product data
                 const productItem = {
-                    name: data.name,
+                    title: data.title,
                     image: res.data.data.display_url,
-                    price: parseFloat(data.price),
-                    category: data.category,
+                    price: data.price,
                     description: data.description,
                 };
 
                 // Send product data to the server
-                const productRes = await axiosInstance.post('http://localhost:4900/products', productItem);
-                console.log(productRes.data);
+                try {
+                    const productRes = await axiosInstance.post('/products', productItem);
+                    console.log('Product creation response:', productRes.data);
 
-                if (productRes.data.insertedId) {
-                    reset();
+                    if (productRes.data.insertedId) {
+                        reset();
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: `${data.name} added successfully`,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                } catch (error) {
+                    console.error('Error adding product:', error);
                     Swal.fire({
-                        position: "top-end",
-                        icon: "success",
-                        title: `${data.name} added successfully`,
-                        showConfirmButton: false,
-                        timer: 1500
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong! Please try again.',
                     });
                 }
+            } else {
+                throw new Error('Image upload failed');
             }
         } catch (error) {
             console.error('Error adding item:', error);
@@ -65,28 +77,15 @@ const AddItems = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label className="form-control w-full">
                         <div className="label">
-                            <span className="label-text">Product Name*</span>
+                            <span className="label-text">Product title*</span>
                         </div>
                         <input
-                            {...register("name", { required: true })}
+                            {...register("title", { required: true })}
                             type="text"
                             placeholder="Product Name"
                             className="input input-bordered w-full" />
                     </label>
                     <div className="flex gap-5">
-                        <div className="flex-1">
-                            <label>
-                                <div className="label">
-                                    <span className="label-text">Select Category*</span>
-                                </div>
-                                <select defaultValue={'default'} {...register("category", { required: true })} className="select select-bordered w-full">
-                                    <option disabled value={'default'}>Select A Category</option>
-                                    <option value="Burger">Burger</option>
-                                    <option value="Pizza">Pizza</option>
-                                    <option value="Drinks">Drinks</option>
-                                </select>
-                            </label>
-                        </div>
                         <div className="flex-1">
                             <label className="form-control w-full">
                                 <div className="label">
@@ -102,7 +101,7 @@ const AddItems = () => {
                     </div>
                     <label className="form-control">
                         <div className="label">
-                            <span className="label-text">Recipe Details*</span>
+                            <span className="label-text">Product Details*</span>
                         </div>
                         <textarea {...register("description", { required: true })} className="textarea textarea-bordered h-24" placeholder="Recipe Details"></textarea>
                     </label>
