@@ -22,6 +22,9 @@ import Cart from "../Pages/Cart/Cart";
 import AddItem from "../Pages/AddItem/AddItem";
 import Login from "../Pages/Login/Login";
 import PrivateRoute from "./PrivetRoute";
+import EditItem from "../Pages/EditItem/EditItem";
+import ManageItems from "../Pages/MangeItem/ManageItem";
+import AdminHome from "../Pages/Admin/AdminHome";
 
 
 
@@ -121,7 +124,20 @@ const Router = createBrowserRouter([
             {
                 path: 'addItems',
                 element: <AddItem />
-            }
+            },
+            {
+                path: 'manageItem',
+                element: <ManageItems />
+            },
+            {
+                path: 'adminHome',
+                element: <AdminHome />
+            },
+            {
+                path: 'editItem/:id',
+                element: <EditItem />,
+                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+            },
         ]
     }
 ]);

@@ -1,7 +1,7 @@
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
-import { LuShoppingCart } from 'react-icons/lu';
+import { FaUsersViewfinder } from "react-icons/fa6";
 import { ImSpoonKnife } from "react-icons/im";
-import { FaList, FaUser, FaHome, FaSignOutAlt } from 'react-icons/fa';
+import { FaList, FaHome, FaSignOutAlt } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider/AuthProvider";
 
@@ -44,20 +44,8 @@ const Dashboard = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/dashboard/users'>
-                            <FaUser className="text-2xl" />
-                            All users
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/dashboard/userHome'>
-                            <FaHome className="text-2xl" />
-                            User Home
-                        </NavLink>
-                    </li>
-                    <li>
                         <NavLink to='/dashboard/review'>
-                            <LuShoppingCart className="text-2xl" />
+                            <FaUsersViewfinder className="text-2xl" />
                             Add review
                         </NavLink>
                     </li>

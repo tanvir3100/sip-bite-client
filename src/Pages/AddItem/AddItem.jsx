@@ -71,8 +71,8 @@ const AddItems = () => {
 
     return (
         <div>
-            <h1 className='text-5xl text-center'>Add Item</h1>
-            <h3 className='text-sm text-center'>Add your New Products</h3>
+            <h1 className='text-5xl text-center'>Add Featured Product</h1>
+            <h3 className='text-sm text-center'>Add your New Featured Product</h3>
             <div className="w-5/6 bg-slate-200 rounded-3xl p-5 mx-auto">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label className="form-control w-full">
