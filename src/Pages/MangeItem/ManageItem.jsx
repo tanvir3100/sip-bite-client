@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import useAxios from "../../Hooks/useAxios";
 import useNewProdutcs from "../../Hooks/useNewProdutcs";
 import ManagePopularItem from "../../Components/ManagePopularItem/ManagePopularItem";
+import ManageChef from "../../Components/ManageChef/ManageChef";
+import ManageRecipe from "../../Components/ManageRecipe/ManageRecipe";
 
 const ManageItems = () => {
     const [product] = useNewProdutcs();
@@ -102,6 +104,12 @@ const ManageItems = () => {
             </div>
             <div>
                 <ManagePopularItem />
+            </div>
+            <div>
+                <ManageChef/>
+            </div>
+            <div>
+                <ManageRecipe/>
             </div>
         </div>
     );

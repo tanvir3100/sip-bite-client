@@ -3,10 +3,10 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import useAxios from "../../Hooks/useAxios";
-import usePopulars from "../../Hooks/usePopulars";
+import useChef from "../../Hooks/useChef";
 
-const ManagePopularItem = () => {
-    const [popular] = usePopulars();
+const ManageChef = () => {
+    const [chef] = useChef();
     const axios = useAxios();
 
     const handleDeleteItem = async (item) => {
@@ -22,7 +22,7 @@ const ManagePopularItem = () => {
             });
 
             if (result.isConfirmed) {
-                const res = await axios.delete(`/popular/${item._id}`);
+                const res = await axios.delete(`/Chefs/${item._id}`);
                 console.log(res.data);
                 if (res.data.deletedCount > 0) {
                     Swal.fire({
@@ -50,11 +50,11 @@ const ManagePopularItem = () => {
 
     return (
         <div>
-            <h1 className='text-5xl text-center'>Manage Popular Products</h1>
-            <h3 className='text-sm text-center mt-2'>Manage your Popular products here</h3>
+            <h1 className='text-5xl text-center'>Manage Chef</h1>
+            <h3 className='text-sm text-center mt-2'>Manage your chef here</h3>
             <div className="bg-white mx-auto p-4">
                 <div className="flex justify-between">
-                    <h2 className="text-3xl mb-5">Available Popular Products: {popular.length}</h2>
+                    <h2 className="text-3xl mb-5">Available Chef: {chef.length}</h2>
                 </div>
                 <div className="overflow-x-auto">
                     <table className="table bg-base-200">
@@ -64,20 +64,22 @@ const ManagePopularItem = () => {
                                 <th></th>
                                 <th>Image</th>
                                 <th>Name</th>
-                                <th>Price</th>
+                                <th>Title</th>
+                                <th>Bio</th>
                                 <th>Update</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {popular?.map((popularItem, index) => (
-                                <tr key={popularItem._id}>
+                            {chef?.map((chefItem, index) => (
+                                <tr key={chefItem._id}>
                                     <th>{index + 1}</th>
-                                    <td><img className="w-20 rounded-lg" src={popularItem.image} alt={popularItem.title} /></td>
-                                    <td>{popularItem.title}</td>
-                                    <td>{popularItem.price}</td>
+                                    <td><img className="w-20 rounded-lg" src={chefItem.image} alt={chefItem.title} /></td>
+                                    <td>{chefItem.name}</td>
+                                    <td>{chefItem.title}</td>
+                                    <td>{chefItem.bio}</td>
                                     <td>
-                                        <Link to={`/dashboard/editPopularItem/${popularItem._id}`}>
+                                        <Link to={`/dashboard/editItem/${chefItem._id}`}>
                                             <button className="btn bg-orange-500 text-white">
                                                 <FaEdit />
                                             </button>
@@ -85,7 +87,7 @@ const ManagePopularItem = () => {
                                     </td>
                                     <td>
                                         <button
-                                            onClick={() => handleDeleteItem(popularItem)}
+                                            onClick={() => handleDeleteItem(chefItem)}
                                             className="btn bg-[#B91C1C] w-10 h-10 flex items-center justify-center btn-xs"
                                         >
                                             <RiDeleteBinLine className="text-2xl text-white" />
@@ -102,4 +104,4 @@ const ManagePopularItem = () => {
 };
 
 
-export default ManagePopularItem;
+export default ManageChef;

@@ -25,6 +25,9 @@ import PrivateRoute from "./PrivetRoute";
 import EditItem from "../Pages/EditItem/EditItem";
 import ManageItems from "../Pages/MangeItem/ManageItem";
 import AdminHome from "../Pages/Admin/AdminHome";
+import EditPopularItem from "../Pages/EditPopularItem/EditPopularItem";
+import EditChefItem from "../Pages/EditChefItem/EditChefItem";
+import EditRecipeItem from "../Pages/EditRecipeItem/EditRecipeItem";
 
 
 
@@ -136,6 +139,21 @@ const Router = createBrowserRouter([
             {
                 path: 'editItem/:id',
                 element: <EditItem />,
+                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+            },
+            {
+                path: 'editPopularItem/:id',
+                element: <EditPopularItem />,
+                loader: ({ params }) => fetch(`http://localhost:5000/popular/${params.id}`)
+            },
+            {
+                path: 'editChefItem/:id',
+                element: <EditChefItem />,
+                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+            },
+            {
+                path: 'editRecipeItem/:id',
+                element: <EditRecipeItem />,
                 loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
             },
         ]

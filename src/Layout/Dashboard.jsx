@@ -23,7 +23,7 @@ const Dashboard = () => {
     return (
         <div className="flex max-w-7xl mx-auto min-h-screen">
             {/* dashboard side bar */}
-            <div className="w-64 min-h-full bg-[#D1A054]">
+            <div className="w-64 min-h-full bg-[#D1A054] fixed">
                 <ul className="menu p-4 gap-2">
                     <li>
                         <NavLink to='/dashboard/adminHome'>
@@ -59,7 +59,7 @@ const Dashboard = () => {
             </div>
             {/* dashboard content */}
             <div className="flex-1">
-                <div className="w-4/5 mx-auto mb-10">
+                <div className="w-4/5 mx-auto mb-10 ml-72">
                     <Outlet />
                 </div>
             </div>
