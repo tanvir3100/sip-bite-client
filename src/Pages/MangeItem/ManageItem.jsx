@@ -13,6 +13,7 @@ const ManageItems = () => {
     const axios = useAxios();
 
     const handleDeleteItem = async (item) => {
+        console.log(item)
         try {
             const result = await Swal.fire({
                 title: "Are you sure?",

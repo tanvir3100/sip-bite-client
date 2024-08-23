@@ -79,7 +79,7 @@ const ManageRecipe = () => {
                                     <td>{recipeItem.ingredients}</td>
                                     <td>{recipeItem.recipe}</td>
                                     <td>
-                                        <Link to={`/dashboard/editItem/${recipeItem._id}`}>
+                                        <Link to={`/dashboard/editRecipeItem/${recipeItem._id}`}>
                                             <button className="btn bg-orange-500 text-white">
                                                 <FaEdit />
                                             </button>

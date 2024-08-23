@@ -1,7 +1,14 @@
+import EditPopularItem from "../Pages/EditPopularItem/EditPopularItem";
+import EditRecipeItem from "../Pages/EditRecipeItem/EditRecipeItem";
+import EditChefItem from "../Pages/EditChefItem/EditChefItem";
+import ManageItems from "../Pages/MangeItem/ManageItem";
 import { createBrowserRouter } from "react-router-dom";
 import Margherita from "../Pages/Pizzas/Margherita";
 import Cappuccino from "../Pages/Drinks/Cappuccino";
 import Pepperoni from "../Pages/Pizzas/Pepperoni";
+import EditItem from "../Pages/EditItem/EditItem";
+import AdminHome from "../Pages/Admin/AdminHome";
+import AddItem from "../Pages/AddItem/AddItem";
 import Classic from "../Pages/Burgers/classic";
 import Contact from "../Pages/Contact/Contact";
 import Recipes from "../Pages/Recipes/Recipes";
@@ -15,19 +22,12 @@ import Spicy from "../Pages/Burgers/Spicy";
 import Latte from "../Pages/Drinks/Latte";
 import Mocha from "../Pages/Drinks/Mocha";
 import About from "../Pages/About/About";
+import Login from "../Pages/Login/Login";
+import PrivateRoute from "./PrivetRoute";
 import Bbq from "../Pages/Burgers/Bbq";
 import Home from "../Pages/Home/Home";
 import Menu from "../Pages/Menu/Menu";
 import Cart from "../Pages/Cart/Cart";
-import AddItem from "../Pages/AddItem/AddItem";
-import Login from "../Pages/Login/Login";
-import PrivateRoute from "./PrivetRoute";
-import EditItem from "../Pages/EditItem/EditItem";
-import ManageItems from "../Pages/MangeItem/ManageItem";
-import AdminHome from "../Pages/Admin/AdminHome";
-import EditPopularItem from "../Pages/EditPopularItem/EditPopularItem";
-import EditChefItem from "../Pages/EditChefItem/EditChefItem";
-import EditRecipeItem from "../Pages/EditRecipeItem/EditRecipeItem";
 
 
 
@@ -149,12 +149,12 @@ const Router = createBrowserRouter([
             {
                 path: 'editChefItem/:id',
                 element: <EditChefItem />,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/chefs/${params.id}`)
             },
             {
                 path: 'editRecipeItem/:id',
                 element: <EditRecipeItem />,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.id}`)
             },
         ]
     }

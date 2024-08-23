@@ -79,7 +79,7 @@ const ManageChef = () => {
                                     <td>{chefItem.title}</td>
                                     <td>{chefItem.bio}</td>
                                     <td>
-                                        <Link to={`/dashboard/editItem/${chefItem._id}`}>
+                                        <Link to={`/dashboard/editChefItem/${chefItem._id}`}>
                                             <button className="btn bg-orange-500 text-white">
                                                 <FaEdit />
                                             </button>
