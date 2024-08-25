@@ -4,6 +4,10 @@ import { ImSpoonKnife } from "react-icons/im";
 import { FaList, FaHome, FaSignOutAlt } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider/AuthProvider";
+import { MdOutlineFastfood } from "react-icons/md";
+import { FaBowlFood } from "react-icons/fa6";
+import { LuChefHat } from "react-icons/lu";
+
 
 
 
@@ -32,15 +36,33 @@ const Dashboard = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/dashboard/addItems'>
-                            <ImSpoonKnife className="text-2xl" />
-                            Add items
-                        </NavLink>
-                    </li>
-                    <li>
                         <NavLink to='/dashboard/manageItem'>
                             <FaList className="text-2xl" />
                             Manage items
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/dashboard/addItems'>
+                            <ImSpoonKnife className="text-2xl" />
+                            Add Featured item
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/dashboard/addItems'>
+                            <MdOutlineFastfood className="text-2xl" />
+                            Add Popular item
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/dashboard/addItems'>
+                            <FaBowlFood className="text-2xl" />
+                            Add Recipe items
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/dashboard/addChefItem'>
+                            <LuChefHat className="text-2xl" />
+                            Add Chef
                         </NavLink>
                     </li>
                     <li>

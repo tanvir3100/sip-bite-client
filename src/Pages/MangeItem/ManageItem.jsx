@@ -7,6 +7,7 @@ import useNewProdutcs from "../../Hooks/useNewProdutcs";
 import ManagePopularItem from "../../Components/ManagePopularItem/ManagePopularItem";
 import ManageChef from "../../Components/ManageChef/ManageChef";
 import ManageRecipe from "../../Components/ManageRecipe/ManageRecipe";
+import ManageReview from "../../Components/ManageReview/ManageReview";
 
 const ManageItems = () => {
     const [product] = useNewProdutcs();
@@ -107,10 +108,13 @@ const ManageItems = () => {
                 <ManagePopularItem />
             </div>
             <div>
-                <ManageChef/>
+                <ManageChef />
             </div>
             <div>
-                <ManageRecipe/>
+                <ManageRecipe />
+            </div>
+            <div>
+                <ManageReview />
             </div>
         </div>
     );

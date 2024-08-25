@@ -2,12 +2,14 @@ import useChef from "../../Hooks/useChef";
 import useNewProdutcs from "../../Hooks/useNewProdutcs";
 import usePopulars from "../../Hooks/usePopulars";
 import useRecipes from "../../Hooks/useRecipes";
+import useReviews from "../../Hooks/useReviews";
 
 
 const AdminHome = () => {
     const [popular] = usePopulars();
     const [product] = useNewProdutcs();
     const [recipe] = useRecipes();
+    const [review] = useReviews();
     const [chef] = useChef();
     return (
         <div className="w-full h-[100vh] flex justify-center items-center">
@@ -36,6 +38,12 @@ const AdminHome = () => {
                         <div className="text-white font-bold text-3xl">
                             <h1>Popular Items</h1>
                             <p className="text-center">{popular.length}</p>
+                        </div>
+                    </div>
+                    <div className="w-80 h-40 bg-indigo-600 rounded-lg flex justify-center items-center">
+                        <div className="text-white font-bold text-3xl">
+                            <h1>review Items</h1>
+                            <p className="text-center">{review.length}</p>
                         </div>
                     </div>
                 </div>

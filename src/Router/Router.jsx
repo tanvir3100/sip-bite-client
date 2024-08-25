@@ -28,6 +28,8 @@ import Bbq from "../Pages/Burgers/Bbq";
 import Home from "../Pages/Home/Home";
 import Menu from "../Pages/Menu/Menu";
 import Cart from "../Pages/Cart/Cart";
+import EditReviewItem from "../Pages/EditReviewItem/EditReviewItem";
+import AddChef from "../Pages/AddChef/AddChef";
 
 
 
@@ -129,6 +131,10 @@ const Router = createBrowserRouter([
                 element: <AddItem />
             },
             {
+                path: 'addChefItem',
+                element: <AddChef />
+            },
+            {
                 path: 'manageItem',
                 element: <ManageItems />
             },
@@ -155,6 +161,11 @@ const Router = createBrowserRouter([
                 path: 'editRecipeItem/:id',
                 element: <EditRecipeItem />,
                 loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.id}`)
+            },
+            {
+                path: 'editReviewItem/:id',
+                element: <EditReviewItem />,
+                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
             },
         ]
     }
