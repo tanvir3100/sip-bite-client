@@ -155,27 +155,27 @@ const Router = createBrowserRouter([
             {
                 path: 'editItem/:id',
                 element: <EditItem />,
-                loader: ({ params }) => fetch(`https://sipbite-server-side.vercel.app/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://sip-bite-server.vercel.app/products/${params.id}`)
             },
             {
                 path: 'editPopularItem/:id',
                 element: <EditPopularItem />,
-                loader: ({ params }) => fetch(`https://sipbite-server-side.vercel.app/popular/${params.id}`)
+                loader: ({ params }) => fetch(`https://sip-bite-server.vercel.app/popular/${params.id}`)
             },
             {
                 path: 'editChefItem/:id',
                 element: <EditChefItem />,
-                loader: ({ params }) => fetch(`https://sipbite-server-side.vercel.app/chefs/${params.id}`)
+                loader: ({ params }) => fetch(`https://sip-bite-server.vercel.app/chefs/${params.id}`)
             },
             {
                 path: 'editRecipeItem/:id',
                 element: <EditRecipeItem />,
-                loader: ({ params }) => fetch(`https://sipbite-server-side.vercel.app/recipes/${params.id}`)
+                loader: ({ params }) => fetch(`https://sip-bite-server.vercel.app/recipes/${params.id}`)
             },
             {
                 path: 'editReviewItem/:id',
                 element: <EditReviewItem />,
-                loader: ({ params }) => fetch(`https://sipbite-server-side.vercel.app/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://sip-bite-server.vercel.app/reviews/${params.id}`)
             },
         ]
     }
