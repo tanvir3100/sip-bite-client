@@ -155,27 +155,27 @@ const Router = createBrowserRouter([
             {
                 path: 'editItem/:id',
                 element: <EditItem />,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://sipbite-server-side.vercel.app/products/${params.id}`)
             },
             {
                 path: 'editPopularItem/:id',
                 element: <EditPopularItem />,
-                loader: ({ params }) => fetch(`http://localhost:5000/popular/${params.id}`)
+                loader: ({ params }) => fetch(`https://sipbite-server-side.vercel.app/popular/${params.id}`)
             },
             {
                 path: 'editChefItem/:id',
                 element: <EditChefItem />,
-                loader: ({ params }) => fetch(`http://localhost:5000/chefs/${params.id}`)
+                loader: ({ params }) => fetch(`https://sipbite-server-side.vercel.app/chefs/${params.id}`)
             },
             {
                 path: 'editRecipeItem/:id',
                 element: <EditRecipeItem />,
-                loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.id}`)
+                loader: ({ params }) => fetch(`https://sipbite-server-side.vercel.app/recipes/${params.id}`)
             },
             {
                 path: 'editReviewItem/:id',
                 element: <EditReviewItem />,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://sipbite-server-side.vercel.app/reviews/${params.id}`)
             },
         ]
     }
