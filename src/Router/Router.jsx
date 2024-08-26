@@ -27,9 +27,11 @@ import PrivateRoute from "./PrivetRoute";
 import Bbq from "../Pages/Burgers/Bbq";
 import Home from "../Pages/Home/Home";
 import Menu from "../Pages/Menu/Menu";
-import Cart from "../Pages/Cart/Cart";
 import EditReviewItem from "../Pages/EditReviewItem/EditReviewItem";
 import AddChef from "../Pages/AddChef/AddChef";
+import AddPopularItem from "../Pages/AddPopular/AddPopularItem";
+import AddRecipe from "../Pages/AddRecipe/AddRecipe";
+import AddReview from "../Pages/AddReview/AddReview";
 
 
 
@@ -56,10 +58,6 @@ const Router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact />
-            },
-            {
-                path: '/cart',
-                element: <Cart />
             },
             {
                 path: 'menu',
@@ -133,6 +131,18 @@ const Router = createBrowserRouter([
             {
                 path: 'addChefItem',
                 element: <AddChef />
+            },
+            {
+                path: 'addPopularItem',
+                element: <AddPopularItem />
+            },
+            {
+                path: 'addRecipeItem',
+                element: <AddRecipe />
+            },
+            {
+                path: 'addReview',
+                element: <AddReview />
             },
             {
                 path: 'manageItem',
